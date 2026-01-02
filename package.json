@@ -1,6 +1,6 @@
 {
     "name": "@laventecare/astro-ui",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "Universal Design System for Astro projects",
     "type": "module",
     "author": "Jeffrey Aalbers",
