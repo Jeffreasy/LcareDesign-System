@@ -49,6 +49,9 @@
         "./css/base": "./dist/base.css",
         "./css/theme": "./dist/theme.css",
         "./css/animations": "./dist/animations.css",
+        "./prose/base": "./src/styles/prose/prose-base.css",
+        "./prose/variants": "./src/styles/prose/prose-variants.css",
+        "./prose/decorations": "./src/styles/prose/prose-decorations.css",
         "./preset": "./tailwind-preset.js",
         "./plugin": "./tailwind-plugin.js",
         "./themes": "./tailwind-themes.js"
