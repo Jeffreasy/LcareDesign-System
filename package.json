@@ -1,5 +1,5 @@
 {
-    "name": "@jjalaa/astro-ui",
+    "name": "@laventecare/astro-ui",
     "version": "3.0.0",
     "description": "Universal Design System for Astro projects",
     "type": "module",
@@ -36,13 +36,14 @@
             "default": "./src/components/index.ts"
         },
         "./utils": {
-            "types": "./dist/utils/index.d.ts",
-            "import": "./dist/utils/index.js",
-            "require": "./dist/utils/index.cjs"
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
         },
         "./utils/storyblok": {
-            "types": "./dist/utils/plugins/storyblok/index.d.ts",
-            "import": "./dist/utils/plugins/storyblok/index.js"
+            "types": "./dist/plugins/storyblok/index.d.ts",
+            "import": "./dist/plugins/storyblok/index.js",
+            "require": "./dist/plugins/storyblok/index.cjs"
         },
         "./css": "./dist/full.css",
         "./css/base": "./dist/base.css",
