@@ -5,7 +5,6 @@ export default defineConfig({
     entry: [
         'src/utils/index.ts',
         'src/utils/plugins/storyblok/index.ts',
-        'src/types/index.ts',
     ],
 
     // Output formats
