@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const postcss = require('postcss');
+const postcssImport = require('postcss-import');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
 
@@ -19,6 +20,7 @@ async function buildCSS() {
 
     // Process with PostCSS
     const processor = postcss([
+        postcssImport(),
         autoprefixer(),
         cssnano({
             preset: ['default', {
@@ -45,7 +47,9 @@ async function buildCSS() {
 
     // Full bundle (everything including main.css with Tailwind directives)
     console.log('  → Building full.css (complete bundle)...');
-    const fullResult = await processor.process(main, { from: undefined });
+    const fullResult = await processor.process(main, {
+        from: path.resolve('src/styles/main.css')
+    });
     fs.writeFileSync('dist/full.css', fullResult.css);
 
     console.log('✅ CSS bundles created in dist/');
