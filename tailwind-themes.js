@@ -7,7 +7,7 @@
  * @example
  * ```javascript
  * // tailwind.config.mjs
- * import themes from '@jjalaa/astro-ui/themes';
+ * import themes from '@laventecare/astro-ui/themes';
  * 
  * export default {
  *   theme: {

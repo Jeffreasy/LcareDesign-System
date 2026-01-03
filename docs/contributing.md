@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Welcome! This guide explains how to contribute to the `@aaltjesdagen/ui` design system.
+Welcome! This guide explains how to contribute to the `@laventecare/astro-ui` design system.
 
 ## Table of Contents
 
@@ -26,14 +26,11 @@ Welcome! This guide explains how to contribute to the `@aaltjesdagen/ui` design 
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/aaltjesdagen-frontend.git
-cd aaltjesdagen-frontend
+git clone https://github.com/Jeffreasy/LcareDesign-System.git
+cd LcareDesign-System
 
 # Install dependencies
 npm install
-
-# Navigate to design system
-cd packages/design-system
 
 # Start development
 npm run dev
@@ -50,10 +47,10 @@ Place components in the correct category folder:
 ```
 src/components/
 ├── forms/              # Form inputs
-├──  feedback/          # Alerts, badges, spinners
+├── feedback/           # Alerts, badges, spinners
 ├── layout/             # Cards, containers, dividers
 ├── overlay/            # Modals, tooltips, dropdowns
-├── navigation/         # Links, breadcrumbs
+├── navigation/         # Links, breadcrumbs, navbars
 ├── media/              # Icons, avatars, images
 ├── core/               # Theme toggle, utilities
 └── specialized/        # Project-specific components
@@ -67,10 +64,10 @@ src/components/
 | `feedback/` | Alert, Toast, Spinner | Status indicators |
 | `layout/` | Card, Container, Tabs | Content organization |
 | `overlay/` | Modal, Tooltip | Overlay UI |
-| `navigation/` | Link, Breadcrumbs | Navigation elements |
+| `navigation/` | Link, Breadcrumbs, Navbar | Navigation elements |
 | `media/` | Icon, Avatar | Media display |
-| `core/` | ThemeToggle | Essential utilities |
-| `specialized/` | Custom components | Project-specific needs |
+| `core/` | ThemeToggle, Button | Essential utilities |
+| `specialized/` | FilterBar, ProgramModal | Domain-specific needs |
 
 ---
 
@@ -190,7 +187,7 @@ Before submitting, verify:
 
 - [ ] **Light mode** - Component looks good
 - [ ] **Dark mode** - Component looks good
-- [ ] ** Responsive** - Works on mobile, tablet, desktop
+- [ ] **Responsive** - Works on mobile, tablet, desktop
 - [ ] **Keyboard navigation** - Tab, Enter, Space work
 - [ ] **Screen reader** - Content announced correctly
 - [ ] **Disabled state** - Properly styled and non-interactive
@@ -198,30 +195,14 @@ Before submitting, verify:
 - [ ] **Focus visible** - Focus indicator is clear
 - [ ] **Reduced motion** - Respects user preference
 
-### Automated Testing
-
-Add unit tests for complex logic:
-
-```typescript
-// ComponentName.test.ts
-import { test, expect } from 'vitest';
-import { render } from '@testing-library/astro';
-import ComponentName from './ComponentName.astro';
-
-test('renders with default props', () => {
-  const { container } = render(ComponentName, {
-    props: { name: 'test' },
-  });
-  
-  expect(container.querySelector('.component-name')).toBeTruthy();
-});
-```
-
-### Accessibility Testing
+### Build Verification
 
 ```bash
-# Run axe-core tests
-npm run test:a11y
+# Build the package
+npm run build
+
+# Verify no errors
+npm run prepublishOnly
 ```
 
 ---
@@ -230,12 +211,12 @@ npm run test:a11y
 
 ### Component Documentation
 
-Add to `docs/astro-components.md`:
+Add to `docs/components.md` or `docs/astro-components.md`:
 
 ```markdown
 ### ComponentName
 
-**Import**: `import { ComponentName } from '@aaltjesdagen/ui/components';`
+**Import**: `import { ComponentName } from '@laventecare/astro-ui/components';`
 
 **Description**: Brief description.
 
@@ -260,6 +241,18 @@ interface Props {
 **Features**:
 - Feature 1
 - Feature 2
+```
+
+### Export Registration
+
+Don't forget to export your component in `src/components/index.ts`:
+
+```typescript
+// Component export
+export { default as ComponentName } from './category/ComponentName.astro';
+
+// Type export
+export type { Props as ComponentNameProps } from './category/ComponentName.astro';
 ```
 
 ### Code Comments
@@ -354,7 +347,7 @@ git checkout -b feature/add-component-name
 
 - Add component file
 - Update `src/components/index.ts` exports
-- Add documentation to `docs/astro-components.md`
+- Add documentation to `docs/components.md`
 - Test thoroughly
 
 ### 3. Commit
@@ -366,7 +359,7 @@ git commit -m "feat: add ComponentName component
 - Add new ComponentName component to [category]/ folder
 - Supports variants: primary, secondary
 - Includes accessibility attributes (ARIA)
-- Fully documented in astro-components.md"
+- Fully documented in components.md"
 ```
 
 **Commit Message Format**:
@@ -384,6 +377,7 @@ type: short description
 - `refactor` - Code refactoring
 - `test` - Adding tests
 - `style` - Formatting, CSS
+- `chore` - Build, dependencies
 
 ### 4. Push & Create PR
 
@@ -411,6 +405,7 @@ Address feedback from reviewers:
 Once approved:
 - Squash and merge
 - Delete feature branch
+- Update CHANGELOG.md if needed
 
 ---
 
@@ -424,6 +419,7 @@ Before submitting a new component:
 - [ ] JSDoc comments added
 - [ ] Uses CSS variables (no hardcoded colors)
 - [ ] Follows naming conventions
+- [ ] Exported in `src/components/index.ts`
 
 ### Functionality
 - [ ] Works in light mode
@@ -439,15 +435,44 @@ Before submitting a new component:
 - [ ] Color contrast passes WCAG AA
 
 ### Documentation
-- [ ] Added to `docs/astro-components.md`
+- [ ] Added to `docs/components.md`
 - [ ] Props documented
 - [ ] Usage example provided
 - [ ] Features listed
 
-### Testing
-- [ ] Manual testing completed
-- [ ] Automated tests (if applicable)
-- [ ] Accessibility tests pass
+### Build & Distribution
+- [ ] Build succeeds (`npm run build`)
+- [ ] No TypeScript errors
+- [ ] Package exports correctly
+
+---
+
+## Publishing Workflow (Maintainers Only)
+
+### Version Bump
+
+```bash
+# Patch (bug fixes): 3.0.4 → 3.0.5
+npm version patch
+
+# Minor (new features): 3.0.4 → 3.1.0
+npm version minor
+
+# Major (breaking changes): 3.0.4 → 4.0.0
+npm version major
+```
+
+### Update CHANGELOG
+
+Add entry to `CHANGELOG.md` following [Keep a Changelog](https://keepachangelog.com/) format.
+
+### Publish to NPM
+
+```bash
+# Build and publish
+npm run build
+npm publish
+```
 
 ---
 
@@ -455,8 +480,8 @@ Before submitting a new component:
 
 Need help? Reach out:
 
-- **File an issue**: [GitHub Issues](https://github.com/yourusername/repo/issues)
-- **Discussion**: [GitHub Discussions](https://github.com/yourusername/repo/discussions)
+- **File an issue**: [GitHub Issues](https://github.com/Jeffreasy/LcareDesign-System/issues)
+- **Discussion**: [GitHub Discussions](https://github.com/Jeffreasy/LcareDesign-System/discussions)
 
 ---
 
@@ -465,3 +490,4 @@ Need help? Reach out:
 - **[Astro Components](./astro-components.md)** - See existing components
 - **[Design Tokens](./design-tokens.md)** - Available design tokens
 - **[Accessibility](./accessibility.md)** - Accessibility requirements
+- **[Getting Started](./getting-started.md)** - Setup guide for consumers

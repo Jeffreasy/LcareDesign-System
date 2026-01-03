@@ -140,7 +140,7 @@ Provide skip navigation for long pages:
 
 ```astro
 ---
-import { VisuallyHidden } from '@aaltjesdagen/ui/components';
+import { VisuallyHidden } from '@laventecare/astro-ui/components';
 ---
 
 <a href="#main-content" class="skip-link">

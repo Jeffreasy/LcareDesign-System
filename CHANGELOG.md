@@ -5,6 +5,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.4] - 2026-01-02
+
+### Fixed
+- **tsup DTS Build Error**: Resolved persistent TypeScript definition build failures
+  - Added `@storyblok/astro` to `devDependencies` to satisfy peer dependency type requirements
+  - tsup now successfully generates `.d.ts` files without errors
+  - No breaking changes for consumers (Storyblok remains optional via `peerDependenciesMeta`)
+
+## [3.0.3] - 2026-01-02
+
+### Fixed
+- **Additional Export Path Corrections**: Fine-tuned subpath exports
+  - Verified all export paths resolve correctly in consuming projects
+  - Minor adjustments to ensure compatibility across different module resolution strategies
+
+## [3.0.2] - 2026-01-02
+
+### Fixed
+- **Robust CSS Inlining**: Implemented professional CSS bundling solution
+  - Integrated `postcss-import` to properly inline `@import` statements
+  - All CSS files now self-contained without external dependencies
+  - Resolved issues with CSS not applying correctly in consuming projects
+- **Build Pipeline**: Enhanced CSS build script for production reliability
+
+## [3.0.1] - 2026-01-02
+
+### Fixed
+- **Package Scope Migration**: `@jjalaa/astro-ui` → `@laventecare/astro-ui`
+  - Migrated to `@laventecare` organization for professional branding
+  - All package references updated across documentation
+- **Subpath Export Corrections**: Fixed utility and CSS export paths
+  - Corrected `./utils` export path resolution
+  - Fixed CSS file exports for all variants (`./css`, `./css/base`, etc.)
+  - Resolved prose CSS export paths
+
 ## [3.0.0] - 2026-01-02
 
 ### 🎉 Initial Release - Universal Design System
@@ -13,9 +48,9 @@ Complete rewrite and generalization of the design system for universal use.
 
 ### Breaking Changes
 
-- **Package Name**: `@aaltjesdagen/ui` → `@jjalaa/astro-ui`
+- **Package Name**: `@laventecare/astro-ui` → `@laventecare/astro-ui`
 - **Default Colors**: Changed from Aaltjesdagen teal/coral to universal blue/red
-- **Storyblok**: Moved to optional plugin at `@jjalaa/astro-ui/utils/storyblok`
+- **Storyblok**: Moved to optional plugin at `@laventecare/astro-ui/utils/storyblok`
 - **Locale**: No longer hardcoded to `nl-NL`, configurable via ThemeProvider
 - **Fonts**: Changed from Outfit/Inter to system fonts by default
 - **FilterBar**: Props restructured (`locations` → `categories`, added `filterField`)
@@ -72,12 +107,12 @@ Complete rewrite and generalization of the design system for universal use.
 
 ```astro
 // OLD (v2.x)
-import { Button } from '@aaltjesdagen/ui/components';
-import { renderText } from '@aaltjesdagen/ui/utils';
+import { Button } from '@laventecare/astro-ui/components';
+import { renderText } from '@laventecare/astro-ui/utils';
 
 // NEW (v3.x)
-import { Button, ThemeProvider } from '@jjalaa/astro-ui/components';
-import { renderText } from '@jjalaa/astro-ui/utils/storyblok';
+import { Button, ThemeProvider } from '@laventecare/astro-ui/components';
+import { renderText } from '@laventecare/astro-ui/utils/storyblok';
 
 <html data-brand="aaltjesdagen">
 <ThemeProvider locale="nl-NL" brand="aaltjesdagen">

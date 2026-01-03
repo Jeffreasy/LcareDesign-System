@@ -1,6 +1,6 @@
 # Astro Components Reference
 
-Complete reference for all 44 Astro components in the `@aaltjesdagen/ui` design system. Import from `@aaltjesdagen/ui/components`.
+Complete reference for all 48 Astro components in the `@laventecare/astro-ui` design system. Import from `@laventecare/astro-ui/components`.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ Complete reference for all 44 Astro components in the `@aaltjesdagen/ui` design 
 
 ### Input
 
-**Import**: `import { Input } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Input } from '@laventecare/astro-ui/components';`
 
 **Description**: Accessible text input with validation states and size variants.
 
@@ -64,7 +64,7 @@ interface Props {
 
 ### Textarea
 
-**Import**: `import { Textarea } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Textarea } from '@laventecare/astro-ui/components';`
 
 **Description**: Multi-line text input with resize control.
 
@@ -101,7 +101,7 @@ interface Props {
 
 ### Select
 
-**Import**: `import { Select } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Select } from '@laventecare/astro-ui/components';`
 
 **Description**: Dropdown select with custom styling.
 
@@ -150,7 +150,7 @@ const categories = [
 
 ### Checkbox
 
-**Import**: `import { Checkbox } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Checkbox } from '@laventecare/astro-ui/components';`
 
 **Description**: Custom styled checkbox with animated checkmark.
 
@@ -181,7 +181,7 @@ interface Props {
 
 ### Radio
 
-**Import**: `import { Radio } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Radio } from '@laventecare/astro-ui/components';`
 
 **Description**: Custom styled radio button.
 
@@ -210,7 +210,7 @@ interface Props {
 
 ### Toggle
 
-**Import**: `import { Toggle } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Toggle } from '@laventecare/astro-ui/components';`
 
 **Description**: iOS-style toggle switch.
 
@@ -241,7 +241,7 @@ interface Props {
 
 ### Label
 
-**Import**: `import { Label } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Label } from '@laventecare/astro-ui/components';`
 
 **Description**: Form label with required indicator.
 
@@ -266,7 +266,7 @@ interface Props {
 
 ### FormField
 
-**Import**: `import { FormField } from '@aaltjesdagen/ui/components';`
+**Import**: `import { FormField } from '@laventecare/astro-ui/components';`
 
 **Description**: Wrapper component combining label, input, and error/hint messages.
 
@@ -313,7 +313,7 @@ interface Props {
 
 ### Alert
 
-**Import**: `import { Alert } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Alert } from '@laventecare/astro-ui/components';`
 
 **Description**: Color-coded alert for notifications.
 
@@ -342,7 +342,7 @@ interface Props {
 
 ### Badge
 
-**Import**: `import { Badge } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Badge } from '@laventecare/astro-ui/components';`
 
 **Description**: Small label for status, categories, or counts.
 
@@ -368,7 +368,7 @@ interface Props {
 
 ### Spinner
 
-**Import**: `import { Spinner } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Spinner } from '@laventecare/astro-ui/components';`
 
 **Description**: Loading spinner indicator.
 
@@ -391,7 +391,7 @@ interface Props {
 
 ### Progress
 
-**Import**: `import { Progress } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Progress } from '@laventecare/astro-ui/components';`
 
 **Description**: Progress bar with determinate and indeterminate modes.
 
@@ -421,7 +421,7 @@ interface Props {
 
 ### Skeleton
 
-**Import**: `import { Skeleton } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Skeleton } from '@laventecare/astro-ui/components';`
 
 **Description**: Loading placeholder with shimmer animation.
 
@@ -447,7 +447,7 @@ interface Props {
 
 ### Toast
 
-**Import**: `import { Toast } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Toast } from '@laventecare/astro-ui/components';`
 
 **Description**: Temporary notification with auto-dismiss.
 
@@ -478,7 +478,7 @@ interface Props {
 
 ### Card
 
-**Import**: `import { Card } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Card } from '@laventecare/astro-ui/components';`
 
 **Description**: Content card with header and footer slots.
 
@@ -509,7 +509,7 @@ interface Props {
 
 ### Container
 
-**Import**: `import { Container } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Container } from '@laventecare/astro-ui/components';`
 
 **Description**: Responsive container with max-width.
 
@@ -533,7 +533,7 @@ interface Props {
 
 ### Divider
 
-**Import**: `import { Divider } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Divider } from '@laventecare/astro-ui/components';`
 
 **Description**: Horizontal or vertical divider.
 
@@ -558,7 +558,7 @@ interface Props {
 
 ### Breadcrumbs
 
-**Import**: `import { Breadcrumbs } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Breadcrumbs } from '@laventecare/astro-ui/components';`
 
 **Description**: Navigation breadcrumb trail.
 
@@ -594,7 +594,7 @@ const items = [
 
 ### Tabs
 
-**Import**: `import { Tabs } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Tabs } from '@laventecare/astro-ui/components';`
 
 **Description**: Tabbed interface with Alpine.js.
 
@@ -637,7 +637,7 @@ const tabs = [
 
 ### Accordion
 
-**Import**: `import { Accordion } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Accordion } from '@laventecare/astro-ui/components';`
 
 **Description**: Expandable content sections.
 
@@ -680,7 +680,7 @@ const items = [
 
 ### Modal
 
-**Import**: `import { Modal } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Modal } from '@laventecare/astro-ui/components';`
 
 **Description**: Generic modal dialog with backdrop.
 
@@ -718,7 +718,7 @@ interface Props {
 
 ### Tooltip
 
-**Import**: `import { Tooltip } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Tooltip } from '@laventecare/astro-ui/components';`
 
 **Description**: Hover tooltip with positioning.
 
@@ -743,7 +743,7 @@ interface Props {
 
 ### Dropdown
 
-**Import**: `import { Dropdown } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Dropdown } from '@laventecare/astro-ui/components';`
 
 **Description**: Dropdown menu with items.
 
@@ -788,7 +788,7 @@ const items = [
 
 ### Popover
 
-**Import**: `import { Popover } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Popover } from '@laventecare/astro-ui/components';`
 
 **Description**: Popover for complex content.
 
@@ -821,7 +821,7 @@ interface Props {
 
 ### Link
 
-**Import**: `import { Link } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Link } from '@laventecare/astro-ui/components';`
 
 **Description**: Enhanced link component.
 
@@ -834,7 +834,7 @@ interface Props {
 
 ### Navbar
 
-**Import**: `import { Navbar } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Navbar } from '@laventecare/astro-ui/components';`
 
 **Description**: Responsive navigation header with desktop/mobile support.
 
@@ -877,7 +877,7 @@ const navItems = [
 
 ### Drawer
 
-**Import**: `import { Drawer } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Drawer } from '@laventecare/astro-ui/components';`
 
 **Description**: Slide-in drawer/sidebar with backdrop.
 
@@ -913,7 +913,7 @@ interface Props {
 
 ### Pagination
 
-**Import**: `import { Pagination } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Pagination } from '@laventecare/astro-ui/components';`
 
 **Description**: Page navigation component.
 
@@ -928,7 +928,7 @@ interface Props {
 
 ### Icon
 
-**Import**: `import { Icon } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Icon } from '@laventecare/astro-ui/components';`
 
 **Description**: SVG icon component.
 
@@ -941,7 +941,7 @@ interface Props {
 
 ### Avatar
 
-**Import**: `import { Avatar } from '@aaltjesdagen/ui/components';`
+**Import**: `import { Avatar } from '@laventecare/astro-ui/components';`
 
 **Description**: User avatar with image, initials, or icon fallback.
 
@@ -970,7 +970,7 @@ interface Props {
 
 ### ThemeToggle
 
-**Import**: `import { ThemeToggle } from '@aaltjesdagen/ui/components';`
+**Import**: `import { ThemeToggle } from '@laventecare/astro-ui/components';`
 
 **Description**: Light/dark mode toggle button.
 
@@ -983,7 +983,7 @@ interface Props {
 
 ### VisuallyHidden
 
-**Import**: `import { VisuallyHidden } from '@aaltjesdagen/ui/components';`
+**Import**: `import { VisuallyHidden } from '@laventecare/astro-ui/components';`
 
 **Description**: Screen-reader only content.
 
@@ -998,7 +998,7 @@ interface Props {
 
 ### FilterBar
 
-**Import**: `import { FilterBar } from '@aaltjesdagen/ui/components';`
+**Import**: `import { FilterBar } from '@laventecare/astro-ui/components';`
 
 **Description**: Filter component for program/events.
 
@@ -1006,7 +1006,7 @@ interface Props {
 
 ### ProgramModal
 
-**Import**: `import { ProgramModal } from '@aaltjesdagen/ui/components';`
+**Import**: `import { ProgramModal } from '@laventecare/astro-ui/components';`
 
 **Description**: Program-specific modal dialog.
 
@@ -1032,7 +1032,7 @@ import {
   Spinner,
   Modal,
   Tabs,
-} from '@aaltjesdagen/ui/components';
+} from '@laventecare/astro-ui/components';
 
 const categories = [
   { value: 'general', label: 'General' },

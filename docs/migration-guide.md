@@ -1,6 +1,6 @@
 # Migration Guide
 
-Guide for upgrading between versions of `@aaltjesdagen/ui`.
+Guide for upgrading between versions of `@laventecare/astro-ui`.
 
 ## Table of Contents
 
@@ -44,16 +44,16 @@ Guide for upgrading between versions of `@aaltjesdagen/ui`.
 ### Installation
 
 ```bash
-npm install @aaltjesdagen/ui@latest
+npm install @laventecare/astro-ui@latest
 ```
 
 ### Verify Version
 
 ```bash
-npm list@aaltjesdagen/ui
+npm list@laventecare/astro-ui
 ```
 
-Should show: `@aaltjesdagen/ui@2.0.0`
+Should show: `@laventecare/astro-ui@2.0.0`
 
 ---
 
@@ -75,17 +75,17 @@ Should show: `@aaltjesdagen/ui@2.0.0`
 
 **Before (1.x)**:
 ```typescript
-import { Icon } from '@aaltjesdagen/ui/components';
-import { Link } from '@aaltjesdagen/ui/components';
-import { ThemeToggle } from '@aaltjesdagen/ui/components';
-import { FilterBar } from '@aaltjesdagen/ui/components';
-import { ProgramModal } from '@aaltjesdagen/ui/components';
+import { Icon } from '@laventecare/astro-ui/components';
+import { Link } from '@laventecare/astro-ui/components';
+import { ThemeToggle } from '@laventecare/astro-ui/components';
+import { FilterBar } from '@laventecare/astro-ui/components';
+import { ProgramModal } from '@laventecare/astro-ui/components';
 ```
 
 **After (2.0)**:
 ```typescript
 // Same import statement works!
-import { Icon, Link, ThemeToggle, FilterBar, ProgramModal } from '@aaltjesdagen/ui/components';
+import { Icon, Link, ThemeToggle, FilterBar, ProgramModal } from '@laventecare/astro-ui/components';
 
 // But components are now organized internally:
 // - Icon: media/Icon.astro
@@ -112,7 +112,7 @@ import {
   Toggle,
   Label,
   FormField,
-} from '@aaltjesdagen/ui/components';
+} from '@laventecare/astro-ui/components';
 
 // Feedback
 import {
@@ -122,7 +122,7 @@ import {
   Progress,
   Skeleton,
   Toast,
-} from '@aaltjesdagen/ui/components';
+} from '@laventecare/astro-ui/components';
 
 // Layout
 import {
@@ -132,7 +132,7 @@ import {
   Breadcrumbs,
   Tabs,
   Accordion,
-} from '@aaltjesdagen/ui/components';
+} from '@laventecare/astro-ui/components';
 
 // Overlay
 import {
@@ -140,17 +140,17 @@ import {
   Tooltip,
   Dropdown,
   Popover,
-} from '@aaltjesdagen/ui/components';
+} from '@laventecare/astro-ui/components';
 
 // Media
 import {
   Avatar,
-} from '@aaltjesdagen/ui/components';
+} from '@laventecare/astro-ui/components';
 
 // Core
 import {
   VisuallyHidden,
-} from '@aaltjesdagen/ui/components';
+} from '@laventecare/astro-ui/components';
 ```
 
 ---
@@ -189,7 +189,7 @@ All CSS classes remain the same:
 Your `tailwind.config.mjs` stays the same:
 
 ```javascript
-import preset from '@aaltjesdagen/ui/preset';
+import preset from '@laventecare/astro-ui/preset';
 
 export default {
   presets: [preset],
@@ -242,7 +242,7 @@ import {
   hasContent,
   storyblokImage,
   formatDate,
-} from '@aaltjesdagen/ui/utils';
+} from '@laventecare/astro-ui/utils';
 ```
 
 ---
@@ -275,8 +275,8 @@ No features are deprecated in 2.0.
 Follow this checklist when upgrading:
 
 ### Installation
-- [ ] Update package: `npm install @aaltjesdagen/ui@latest`
-- [ ] Verify version: `npm list @aaltjesdagen/ui`
+- [ ] Update package: `npm install @laventecare/astro-ui@latest`
+- [ ] Verify version: `npm list @laventecare/astro-ui`
 - [ ] Clear build cache: `npm run clean` (if applicable)
 
 ### Testing
@@ -320,7 +320,7 @@ npx astro check
 
 ```bash
 # Ensure latest version
-npm install @aaltjesdagen/ui@latest
+npm install @laventecare/astro-ui@latest
 
 # Clear node_modules and reinstall
 rm -rf node_modules package-lock.json

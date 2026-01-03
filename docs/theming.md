@@ -76,7 +76,7 @@ The design system automatically switches to dark mode based on:
 
 ```astro
 ---
-import { ThemeToggle } from '@aaltjesdagen/ui/components';
+import { ThemeToggle } from '@laventecare/astro-ui/components';
 ---
 
 <nav>
@@ -248,7 +248,7 @@ Import after the default theme:
 
 ```astro
 ---
-import '@aaltjesdagen/ui/css';
+import '@laventecare/astro-ui/css';
 import './custom-theme.css';
 ---
 ```

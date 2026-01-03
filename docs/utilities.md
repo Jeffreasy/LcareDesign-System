@@ -14,7 +14,7 @@ TypeScript/JavaScript helper functions for working with Storyblok content, image
 
 ## Installation
 
-Import utilities from `@aaltjesdagen/ui/utils`:
+Import utilities from `@laventecare/astro-ui/utils`:
 
 ```typescript
 import { 
@@ -22,7 +22,7 @@ import {
   getTitle, 
   storyblokImage, 
   formatDate 
-} from '@aaltjesdagen/ui/utils';
+} from '@laventecare/astro-ui/utils';
 ```
 
 ---
@@ -49,7 +49,7 @@ function renderText(content: any): string
 **Usage:**
 ```astro
 ---
-import { renderText } from '@aaltjesdagen/ui/utils';
+import { renderText } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 const html = renderText(blok.tekst);
@@ -90,7 +90,7 @@ function getTitle(blok: any, field: string = 'title'): string
 **Usage:**
 ```astro
 ---
-import { getTitle } from '@aaltjesdagen/ui/utils';
+import { getTitle } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 const title = getTitle(blok);
@@ -130,7 +130,7 @@ function getTekst(blok: any, field: string = 'tekst'): any
 **Usage:**
 ```astro
 ---
-import { getTekst, renderText } from '@aaltjesdagen/ui/utils';
+import { getTekst, renderText } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 const tekst = getTekst(blok);
@@ -160,7 +160,7 @@ function hasContent(content: any): boolean
 **Usage:**
 ```astro
 ---
-import { hasContent, renderText } from '@aaltjesdagen/ui/utils';
+import { hasContent, renderText } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 ---
@@ -214,7 +214,7 @@ function storyblokImage(
 **Usage:**
 ```astro
 ---
-import { storyblokImage } from '@aaltjesdagen/ui/utils';
+import { storyblokImage } from '@laventecare/astro-ui/utils';
 import { Image } from 'astro:assets';
 
 const { blok } = Astro.props;
@@ -273,7 +273,7 @@ function responsiveImageSrcset(
 **Usage:**
 ```astro
 ---
-import { responsiveImageSrcset, storyblokImage } from '@aaltjesdagen/ui/utils';
+import { responsiveImageSrcset, storyblokImage } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 const srcset = responsiveImageSrcset(blok.image.filename);
@@ -328,7 +328,7 @@ function formatDate(
 **Usage:**
 ```astro
 ---
-import { formatDate } from '@aaltjesdagen/ui/utils';
+import { formatDate } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 const formattedDate = formatDate(blok.datum);
@@ -400,7 +400,7 @@ function formatTime(
 **Usage:**
 ```astro
 ---
-import { formatTime } from '@aaltjesdagen/ui/utils';
+import { formatTime } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 ---
@@ -458,7 +458,7 @@ Development logging utilities (automatically silent in production).
 import { 
   logImageOptimization,
   logDateFormatting
-} from '@aaltjesdagen/ui/utils';
+} from '@laventecare/astro-ui/utils';
 ```
 
 **Features:**
@@ -483,7 +483,7 @@ import {
   formatDate, 
   formatTime, 
   storyblokImage 
-} from '@aaltjesdagen/ui/utils';
+} from '@laventecare/astro-ui/utils';
 import { Image } from 'astro:assets';
 
 const { blok } = Astro.props;
@@ -523,7 +523,7 @@ All utilities are fully typed. Import types from the utils module:
 ```typescript
 import type { 
   // Add type imports if needed
-} from '@aaltjesdagen/ui/utils';
+} from '@laventecare/astro-ui/utils';
 ```
 
 ---

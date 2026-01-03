@@ -205,7 +205,7 @@ Use the `renderText` utility with prose classes:
 
 ```astro
 ---
-import { renderText } from '@aaltjesdagen/ui/utils';
+import { renderText } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 const html = renderText(blok.content);
@@ -218,7 +218,7 @@ const html = renderText(blok.content);
 
 ```astro
 ---
-import { renderText, getTitle } from '@aaltjesdagen/ui/utils';
+import { renderText, getTitle } from '@laventecare/astro-ui/utils';
 
 const { blok } = Astro.props;
 const title = getTitle(blok);

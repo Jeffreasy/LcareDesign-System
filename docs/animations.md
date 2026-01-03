@@ -468,7 +468,7 @@ Automatically animate elements as they scroll into view using Alpine.js.
 
 ### Setup
 
-The scroll reveal plugin is automatically available when using `@aaltjesdagen/ui`.
+The scroll reveal plugin is automatically available when using `@laventecare/astro-ui`.
 
 ### Basic Usage
 
